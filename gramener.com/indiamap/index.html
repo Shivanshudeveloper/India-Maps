@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="en">
+
+<!-- Mirrored from gramener.com/indiamap/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jul 2020 13:20:07 GMT -->
+<head>
+  <title>India Map</title>
+  <meta property="og:title" content="Plot your data on india map, online for free">
+  <meta property="og:description" content="Free mapping software from Gramener that lets you plot any data on India map. Check out the interactive mapping tool and also download end visualization.">
+  <meta property="og:url" content="index.html">
+  <meta name="twitter:title" content="Plot your data on india map, online for free">
+  <meta name="twitter:description" content="Free mapping software from Gramener that lets you plot any data on India map. Check out the interactive mapping tool and also download end visualization.">
+  <meta name="twitter:url" content="index.html">
+  <link rel="stylesheet" href="../css/bootstrap.min5946.css?v=323f5">
+  <link rel="stylesheet" href="../css/base2659.css?v=b2f8f">
+  <link rel="stylesheet" href="../css/font-awesome.mina7df.css?v=4fbd1">
+  <style>
+  #heading {
+    font-weight: bold;
+    font-size: 24px;
+    height: 32px;
+    line-height: 32px;
+    text-transform: uppercase;
+
+    background-color: #fff;
+    width: 580px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    -webkit-box-shadow:none;
+       -moz-box-shadow:none;
+         -o-box-shadow:none;
+            box-shadow:none;
+  }
+  #map {
+    width: 600px;
+    height: 700px;
+  }
+  #legend {
+    position: relative;
+    top: -700px;
+    left: 385px;
+  }
+  #data {
+    width: 300px;
+    height: 200px
+  }
+  #notes {
+    width: 300px;
+    height: 100px;
+  }
+  #url {
+    margin-top: 50px;
+    display: none;
+  }
+  #url input {
+    width: 300px;
+  }
+  #err {
+    display: none;
+  }
+  #err strong {
+    color: red;
+  }
+  #err p {
+    font-size: 68.75%;
+    line-height: 1.5;
+  }
+  .hero-unit .legend { width: 250px; float:right; font-size: 14px; }
+  .hero-unit .legend b { padding: 0 4px; font-family: Calibri, sans-serif; color: #000; }
+  @media print {
+    .small-header, .description .side {
+      display: none;
+    }
+    #heading {
+      background-color: none;
+      border: none;
+    }
+  }
+  </style>
+</head><body>
+
+<div class="header">
+  <div class="container">
+    <h1><a href="https://gramener.com/"><i style="opacity:0.8" class="icon-home"></i></a> India map</h1>
+  </div>
+</div>
+
+<div class="container">
+ <div class="row">
+  <div class="span8">
+   <input id="heading" placeholder="Editable heading">
+   <iframe id="map" frameborder="0"></iframe>
+   <svg id="legend" width="200" height="20">
+    <defs>
+     <linearGradient id="RYG">
+      <stop offset="5%" stop-color="#f00"/>
+      <stop offset="50%" stop-color="#ff0"/>
+      <stop offset="95%" stop-color="#0F0"/>
+     </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="200" height="20" fill="url(#RYG)"  />
+    <text id="lo" x="5" y="16" text-anchor="start">AA</text>
+    <text id="md" x="100" y="16" text-anchor="middle">BB</text>
+    <text id="hi" x="195" y="16" text-anchor="end">CC</text>
+   </svg>
+  </div>
+  <div class="span4">
+   <p>This is an interactive tool that lets you plot a colour against each district in India.</p>
+   <p>Select a Map<br>
+    <select>
+     <option value="india-states.svg">India - State Map</option>
+     <option value="india-districts.svg">India - District Map</option>
+     <option value="a-n-islands.svg">Andaman &amp; Nicobar Islands</option>
+     <option value="andhra-pradesh.svg">Andhra Pradesh</option>
+     <option value="arunachal-pradesh.svg">Arunachal Pradesh</option>
+     <option value="assam.svg">Assam</option>
+     <option value="bihar.svg">Bihar</option>
+     <option value="chandigarh.svg">Chandigarh</option>
+     <option value="chhattisgarh.svg">Chhattisgarh</option>
+     <option value="d-n-haveli.svg">Dadra &amp; Nagar Haveli</option>
+     <option value="daman-diu.svg">Daman &amp; Diu</option>
+     <option value="delhi.svg">Delhi</option>
+     <option value="goa.svg">Goa</option>
+     <option value="gujarat.svg">Gujarat</option>
+     <option value="haryana.svg">Haryana</option>
+     <option value="himachal-pradesh.svg">Himachal Pradesh</option>
+     <option value="jammu-kashmir.svg">Jammu &amp; Kashmir</option>
+     <option value="jharkhand.svg">Jharkhand</option>
+     <option value="karnataka.svg">Karnataka</option>
+     <option value="kerala.svg">Kerala</option>
+     <option value="lakshadweep.svg">Lakshadweep</option>
+     <option value="madhya-pradesh.svg">Madhya Pradesh</option>
+     <option value="maharashtra.svg">Maharashtra</option>
+     <option value="manipur.svg">Manipur</option>
+     <option value="meghalaya.svg">Meghalaya</option>
+     <option value="mizoram.svg">Mizoram</option>
+     <option value="nagaland.svg">Nagaland</option>
+     <option value="odisha.svg">Odisha</option>
+     <option value="puducherry.svg">Puducherry</option>
+     <option value="punjab.svg">Punjab</option>
+     <option value="rajasthan.svg">Rajasthan</option>
+     <option value="sikkim.svg">Sikkim</option>
+     <option value="tamil-nadu.svg">Tamil Nadu</option>
+     <option value="tripura.svg">Tripura</option>
+     <option value="uttar-pradesh.svg">Uttar Pradesh</option>
+     <option value="uttarakhand.svg">Uttarakhand</option>
+     <option value="west-bengal.svg">West Bengal</option>
+    </select>
+   </p>
+   <p>Change the values below, or copy into Excel, change, and paste it back.</p>
+   <textarea id="data">
+   Loading map...
+
+   You need Google Chrome, Firefox or Safari to view the map.
+   </textarea>
+   <p><label><input name="invert" id="invert" type="checkbox"> High values are red</label></p>
+   <p><textarea id="notes" placeholder="Your notes"></textarea></p>
+   <div id="url">Permanent link to this map:<input></div>
+  </div>
+ </div>
+
+ <div class="row">
+  <div class="span12">
+   <a name="purchase"></a>
+   <h3>Download offline Excel map application</h3>
+   <p><a class="btn btn-primary" href="https://gramener.com/map/">Download maps</a></p>
+   <p>We offer these maps for free. They come with no support.</p>
+   <p>We do hope you will recommend <a href="https://gramener.com/demo/">some of our work</a> to your colleagues and friends.</p>
+   <hr>
+   <p>This video shows you how the Excel map application works.</p>
+   <iframe width="640" height="480" src="https://www.youtube.com/embed/Us-gvG11MlI?rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+ </div>
+</div>
+
+<script src="../js/jquery.mindbf6.js?v=643c1"></script>
+<script src="script8494.js?v=b8943"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-42126862-1', 'gramener.com');
+ga('send', 'pageview');
+</script>
+<script>/*<![CDATA[*/(function(w,a,b,d,s){w[a]=w[a]||{};w[a][b]=w[a][b]||{q:[],track:function(r,e,t){this.q.push({r:r,e:e,t:t||+new Date});}};var e=d.createElement(s);var f=d.getElementsByTagName(s)[0];e.async=1;e.src='http://a16084.actonservice.com/cdnr/90/acton/bn/tracker/16084';f.parentNode.insertBefore(e,f);})(window,'ActOn','Beacon',document,'script');ActOn.Beacon.track();/*]]>*/</script>
+
+</body>
+<!-- Mirrored from gramener.com/indiamap/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jul 2020 13:20:19 GMT -->
+</html>
